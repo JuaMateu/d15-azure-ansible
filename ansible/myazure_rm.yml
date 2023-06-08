@@ -1,7 +1,7 @@
 plugin: azure_rm
 auth_source: env
 include_vm_resource_groups:
-  - desafio-resource-group
+  - educacionit-devops-rg
 
 keyed_groups:
   - key: tags.approle
