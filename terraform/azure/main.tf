@@ -228,7 +228,7 @@ resource "azurerm_subnet_network_security_group_association" "desafio-nsg-assoc"
 
 #base de datos
 resource "azurerm_mysql_server" "db-server" {
-  name                = "${random_pet.prefix.id}-db-mysql-server"
+  name                = "${random_pet.prefix.id}-db-mysql"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   version             = "5.7" # Choose the desired MySQL version

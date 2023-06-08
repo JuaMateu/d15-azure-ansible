@@ -33,6 +33,6 @@ variable "db-pwd" {
 
 variable "prefix" {
   type        = string
-  default     = "Desafio15"
+  default     = "prueba"
   description = "Prefix of the resource name"
 }
