@@ -22,3 +22,17 @@ variable "web_server_count" {
   type    = number
   default = 2
 }
+
+variable "admin_ssh_key" {
+  type = string
+}
+
+variable "db-pwd" {
+  type = string
+}
+
+variable "prefix" {
+  type        = string
+  default     = "Desafio15"
+  description = "Prefix of the resource name"
+}
