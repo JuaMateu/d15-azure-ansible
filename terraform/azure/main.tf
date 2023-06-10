@@ -152,13 +152,13 @@ resource "azurerm_linux_virtual_machine" "desafio_web_server" {
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   size                  = "Standard_B1s"
-  admin_username        = "adminuser"
+  admin_username        = "juanMateu"
   network_interface_ids = ["${element(azurerm_network_interface.desafio_template.*.id, count.index)}"]
   disable_password_authentication = true
   computer_name                   = "linux-vm${count.index}"
 
   admin_ssh_key {
-    username   = "adminuser"
+    username   = "juanMateu"
     public_key = var.admin_ssh_key
   }
 
@@ -248,7 +248,7 @@ resource "azurerm_mysql_server" "db-server" {
 
 
 
-  administrator_login          = "adminuser" # Replace with your desired admin username
+  administrator_login          = "juanMateu" # Replace with your desired admin username
   administrator_login_password = var.db-pwd  # Replace with your desired admin password
 
   tags = {
