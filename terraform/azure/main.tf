@@ -144,7 +144,7 @@ resource "azurerm_availability_set" "vmavset-x1" {
   }
 }
 
-# webserver asociado a lb
+# Create the web servers and associate them with the load balancer backend pool
 resource "azurerm_linux_virtual_machine" "desafio_web_server" {
   count                 = var.web_server_count
   name                  = "desafio-web-server-${count.index}"
@@ -228,7 +228,7 @@ resource "azurerm_subnet_network_security_group_association" "desafio-nsg-assoc"
 
 #base de datos
 resource "azurerm_mysql_server" "db-server" {
-  name                = "${random_pet.prefix.id}-db-mysql"
+  name                = "${random_pet.prefix.id}-db-mysql-server"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   version             = "5.7" # Choose the desired MySQL version

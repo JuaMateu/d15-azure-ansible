@@ -3,6 +3,10 @@
 
 # Resultados
 
+### Infra
+![Infra](./etc/infra.PNG)
+### Diagrama Despliegue
+![Diagrama Despliegue](./etc/DiagramaDespliegue.PNG)
 ### Apply exitoso en terraform cloud
 ![apply en terraform cloud](./etc/tfCloudApply.PNG)
 ### Resource Group creado con los recursos correspondientes
